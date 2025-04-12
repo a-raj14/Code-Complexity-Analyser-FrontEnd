@@ -1,0 +1,131 @@
+/* App.css */
+
+/* Basic styles for the body */
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('./Assest/Imgaes/BG.jpg') no-repeat center center/cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover; /* Ensure the background image covers the full viewport */
+    position: relative;
+}
+
+/* Main container styling */
+.App {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    resize: vertical;
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+}
+
+/* Select dropdown styling */
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Results section styling */
+div.results {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #4CAF50;
+}
+
+p {
+    font-size: 1rem;
+    color: #333;
+    margin: 5px 0;
+}
+
+p strong {
+    font-weight: bold;
+}
+
+/* Center the footer with heart message in the middle of the page */
+.center-footer {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #555;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.884);
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.center-footer p {
+    margin: 0;
+}
+
+.center-footer span {
+    font-size: 24px; /* Adjust size for better visibility */
+}
