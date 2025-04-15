@@ -6,6 +6,7 @@ function App() {
     const [code, setCode] = useState("");
     const [language, setLanguage] = useState("cpp");
     const [result, setResult] = useState(null);
+    const [loading, setLoading] = useState(false);
     const [showExplanation, setShowExplanation] = useState(false);
 
     const handleCodeChange = (e) => {
@@ -17,9 +18,11 @@ function App() {
     };
 
     const handleSubmit = async (e) => {
+        setLoading(true);
         e.preventDefault();
         if (code.trim() === "") {
             alert("Please enter some code before submitting.");
+                    setLoading(false);
             return;
         }
         console.log("📝 Submitted Code:", code);
@@ -34,6 +37,7 @@ function App() {
             console.error("Error analyzing code:", error);
             alert("An error occurred during analysis. Please try again.");
         }
+        setLoading(false);
     };
 
     return (
@@ -60,7 +64,13 @@ function App() {
                 </div>
                 <button type="submit">Analyze</button>
             </form>
-
+            {/* Loader */}
+                {loading && (
+                <div className="mt-4 text-blue-600 font-semibold">
+                    <span role="img" aria-label="sand timer">⏳</span>
+                     Analyzing code, please wait...
+                    </div>
+                )}
             {result && (
                 <div>
                     <h3>Results:</h3>
